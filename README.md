@@ -1,10 +1,32 @@
-# 🚀 Rust CP Toolkit (`rust-cp-toolkit`)
+![Rust](https://img.shields.io/badge/Rust-stable-orange)
 
-A production-grade, feature-rich Rust CLI application designed to automate and streamline the compile-run workflow, sample testing, benchmarking, and stress testing for competitive programming.
+![CI](https://img.shields.io/github/actions/workflow/status/...)
+
+![License](https://img.shields.io/badge/license-MIT-blue)
+
+
+# Rust CP Toolkit (`rust-cp-toolkit`)
+
+A Rust command-line toolkit that streamlines compiling, testing, benchmarking, and stress-testing competitive programming solutions.
 
 ---
 
-## 👔 Note to Recruiters & Engineering Managers
+## Motivation
+
+When solving competitive programming problems, developers repeatedly perform the same workflow:
+
+- Create a problem directory
+- Write a solution
+- Compile it
+- Run sample tests
+- Measure execution time
+- Stress-test against randomized cases
+
+This project automates that workflow through a single Rust-based command-line application, reducing repetitive tasks and providing a consistent development experience.
+
+---
+
+## Project Overview
 
 **Welcome!** If you are reviewing this repository for a Software Engineering role, this project was built from scratch to demonstrate my proficiency in systems programming and my ability to write idiomatic, production-ready Rust code.
 
@@ -42,24 +64,26 @@ I've made it as easy as possible to verify that this toolkit works locally on yo
    cargo run -- compile main.cpp
    cargo run -- test main.exe
    ```
-   *(You will see a beautiful colored terminal output showing that the tests passed).*
+   *(Colored terminal output indicating passed and failed test cases.).*
 
 4. **Benchmark the Execution Speed**
    ```bash
    cargo run -- benchmark main.exe --input tests/sample1.in --runs 10
    ```
-   *(Measures the exact microsecond execution time of the binary).*
+   *(Measures the execution time across multiple runs of the binary).*
 
 ---
 
-## 📖 Features
+## Features
 
-- **Project Scaffold**: Instantly generate a clean folder structure for solving problems.
-- **Automated Compilation**: Compile C++ solutions with optimal flags (`-O2`, `-std=c++17`, `-Wall`).
-- **Smart Execution**: Run binaries safely with timeout protection.
-- **Sample Testing**: Validate solutions against multiple `.in`/`.out` pairs. Output comparison is whitespace-agnostic.
-- **Stress Testing**: Automate the generation of random tests to find edge cases where an optimized solution diverges from a naive/brute-force approach.
-- **Benchmarking**: Measure the exact execution time of a solution over multiple runs to find average/min/max speeds.
+- Initialize a competitive programming workspace
+- Compile C++ solutions using configurable compiler flags
+- Execute compiled programs safely with timeout protection
+- Validate solutions against sample test cases
+- Compare program output with expected output
+- Benchmark execution time across multiple runs
+- Stress-test solutions using generated test cases
+- Clean generated artifacts
 
 ---
 
@@ -93,4 +117,4 @@ rust-cp-toolkit/
 
 - **Why `clap`?** Chosen for its robust derive macros which make the CLI self-documenting, type-safe, and incredibly easy to maintain.
 - **Dependency Minimization:** Relied heavily on the Rust Standard Library (e.g., standard `std::process`, custom thread-based timeouts) to minimize bloat and keep compile times under a few seconds. 
-- **Graceful Degradation:** The toolkit never panics if a user provides a bad file or if a C++ program infinite-loops. Errors are caught, formatted nicely in red text, and returned to the user safely.
+- **Error Handling:** The toolkit never panics if a user provides a bad file or if a C++ program infinite-loops. Errors are caught, formatted nicely in red text, and returned to the user safely.
