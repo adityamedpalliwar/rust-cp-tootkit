@@ -1,0 +1,13 @@
+/target/
+**/*.rs.bk
+
+# Test outputs and binaries
+*.exe
+*.out
+*.o
+*.class
+*.pyc
+
+# temporary test directories
+.cp_test_tmp/
+test_outputs/

@@ -1,0 +1,23 @@
+[package]
+name = "rust-cp-toolkit"
+version = "0.1.0"
+edition = "2021"
+authors = ["Aditya <aditya@example.com>"]
+description = "A feature-rich Rust CLI that automates compile-run workflows, sample testing, benchmarking, and stress testing for competitive programming."
+repository = "https://github.com/adityamedpalliwar/rust-cp-toolkit"
+license = "MIT"
+readme = "README.md"
+keywords = ["competitive-programming", "cli", "testing", "cpp"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+anyhow = "1.0"
+thiserror = "1.0"
+colored = "2.1"
+wait-timeout = "0.2.1"
+
+[dev-dependencies]
+assert_cmd = "2.0"
+predicates = "3.0"
+tempfile = "3.8"
