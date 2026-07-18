@@ -1,10 +1,3 @@
-![Rust](https://img.shields.io/badge/Rust-stable-orange)
-
-![CI](https://img.shields.io/github/actions/workflow/status/...)
-
-![License](https://img.shields.io/badge/license-MIT-blue)
-
-
 # Rust CP Toolkit (`rust-cp-toolkit`)
 
 A Rust command-line toolkit that streamlines compiling, testing, benchmarking, and stress-testing competitive programming solutions.
@@ -30,7 +23,7 @@ This project automates that workflow through a single Rust-based command-line ap
 
 **Welcome!** If you are reviewing this repository for a Software Engineering role, this project was built from scratch to demonstrate my proficiency in systems programming and my ability to write idiomatic, production-ready Rust code.
 
-### 🦀 Rust Concepts Demonstrated:
+###  Rust Concepts Demonstrated:
 - **Ownership & Borrowing:** Extensive use of references (`&str`, `&[String]`) to pass data between CLI routers and command executors without unnecessary memory allocations or `.clone()` calls.
 - **Robust Error Handling:** Zero use of `.unwrap()` in production code. Uses `anyhow` for top-level application context and `thiserror` for domain-specific library errors (`FsError`, `ProcessError`).
 - **Modular Architecture:** Clean separation of concerns. The CLI parsing layer (`src/cli.rs`) is isolated from the business logic (`src/commands/`), which in turn relies on reusable, stateless utility modules (`src/utils/`).
@@ -39,7 +32,7 @@ This project automates that workflow through a single Rust-based command-line ap
 
 ---
 
-## 🛠️ How to Test This Project in 60 Seconds
+##  How to Test This Project in 60 Seconds
 
 I've made it as easy as possible to verify that this toolkit works locally on your machine.
 
